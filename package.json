@@ -52,16 +52,4 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.4"
   }
-
-  {
-    "compilerOptions": {
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "moduleResolution": "node",
-      "target": "es5",
-      "lib": ["dom", "es2015"],
-      "jsx": "react"
-    }
-  }
-
 }

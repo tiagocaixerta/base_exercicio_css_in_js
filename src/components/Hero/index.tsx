@@ -1,4 +1,29 @@
 import styled from 'styled-components';
+import React from 'react';
+
+
+const HeroSection = styled.section`
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+`;
+
+
+const HeroTitle = styled.h1`
+  font-size: 3rem;
+  margin-bottom: 20px;
+`;
+
+
+const HeroSubtitle = styled.h2`
+  font-size: 2rem;
+  color: #343a40;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+`;
+
 
 const Form = styled.form`
   display: flex;
@@ -8,22 +33,18 @@ const Form = styled.form`
   background-color: #f8f9fa;
 `;
 
-const HeroTitle = styled.h2`
-  font-size: 2rem;
-  color: #343a40;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-`;
-
-const Hero = () => (
-  <Form>
-    <div className="container">
-      <HeroTitle>
+function Hero() {
+  return (
+    <HeroSection>
+      <HeroTitle>Encontre sua Próxima Oportunidade</HeroTitle>
+      <HeroSubtitle>
         As melhores vagas para tecnologia, design e artes visuais.
-      </HeroTitle>
-    </div>
-  </Form>
-);
+      </HeroSubtitle>
+      <Form>
+        <input type="text" placeholder="Pesquise vagas..." />
+      </Form>
+    </HeroSection>
+  );
+}
 
 export default Hero;

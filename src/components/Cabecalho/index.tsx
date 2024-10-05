@@ -1,16 +1,25 @@
+import React from 'react';
 import styled from 'styled-components';
 
-const Header = styled.header`
-  background-color: #333;
-  color: #fff;
+
+const HeaderWrapper = styled.header`
+  background-color: ${({ theme }) => theme.colors.primary || '#333'};
+  color: ${({ theme }) => theme.colors.text || 'white'};
   padding: 20px;
   text-align: center;
 `;
 
-const Cabecalho = () => (
-  <Header>
-    <h1>EBAC Jobs</h1>
-  </Header>
-);
+const Title = styled.h1`
+  font-size: 2rem;
+  margin: 0;
+`;
 
-export default Cabecalho;
+function Header() {
+  return (
+    <HeaderWrapper>
+      <Title>EBAC Jobs</Title>
+    </HeaderWrapper>
+  );
+}
+
+export default Header;

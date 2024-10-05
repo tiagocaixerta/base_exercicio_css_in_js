@@ -1,19 +1,24 @@
-import Header from './components/Cabecalho'
-import Hero from './components/Hero'
-import ListaVagas from './containers/ListaVagas'
+import Header from './components/Cabecalho';
+import Hero from './components/Hero';
+import ListaVagas from './containers/ListaVagas';
+import styled from 'styled-components';
 
-import './global.css'
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+`;
 
 function App() {
   return (
     <>
       <Header />
       <Hero />
-      <div className="container">
+      <Container>
         <ListaVagas />
-      </div>
+      </Container>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

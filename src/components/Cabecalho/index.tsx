@@ -1,25 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import { CabecalhoStyled } from './Cabecalho'
 
+const Cabecalho = () => (
+  <CabecalhoStyled>
+    <h1>EBAC Jobs</h1>
+  </CabecalhoStyled>
+)
 
-const HeaderWrapper = styled.header`
-  background-color: ${({ theme }) => theme.colors.primary || '#333'};
-  color: ${({ theme }) => theme.colors.text || 'white'};
-  padding: 20px;
-  text-align: center;
-`;
-
-const Title = styled.h1`
-  font-size: 2rem;
-  margin: 0;
-`;
-
-function Header() {
-  return (
-    <HeaderWrapper>
-      <Title>EBAC Jobs</Title>
-    </HeaderWrapper>
-  );
-}
-
-export default Header;
+export default Cabecalho
